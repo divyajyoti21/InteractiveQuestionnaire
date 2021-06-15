@@ -1,0 +1,325 @@
+$backgroundColorThemeBlue : #6495ED;
+$genericColorWhite : white;
+$backgroundColorThemePink : #F87DA9;
+$appFont : Arial, Helvetica, sans-serif;
+button {
+	background-color: $backgroundColorThemeBlue;
+	border: none;
+	color: $genericColorWhite;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 4px 4px;
+	cursor: pointer;
+	span {
+		width: 25%;
+		text-align: left;
+		font-size: 15px;
+		font-family: $appFont;
+	}
+}
+.button {
+	background-color: $backgroundColorThemeBlue;
+	border: none;
+	color: $genericColorWhite;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 4px 4px;
+	cursor: pointer;
+}
+div {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	>p {
+		color: olive;
+	}
+}
+span {
+	font-size: 12px;
+}
+.questionBlock {
+	background-color: $genericColorWhite;
+	border-bottom: 1px solid #ccc;
+}
+.error {
+	color: #db2269;
+	font-size: 12px;
+	font-family: $appFont;
+	display: relative;
+}
+.accordion {
+	background-color: $genericColorWhite;
+	border-top: 3px solid 6495ED;
+	border-bottom: 1px solid 6495ED;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+}
+.accordion:disabled {
+	display:none;
+}
+.buttonNone {
+	display: none;
+}
+.buttonDisplay {
+	display: block;
+}
+.panelNone {
+	padding: 0 18px;
+	display: none;
+	background-color: $genericColorWhite;
+	overflow: hidden;
+}
+.panelBlock {
+	padding: 0 18px;
+	display: block;
+	background-color: $genericColorWhite;
+	overflow: hidden;
+}
+.accordinLeft {
+	float: left;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.accordinUnAnswered {
+	height: 15px;
+	width: 15px;
+	background-color: $backgroundColorThemeBlue;
+	border-radius: 50%;
+	float: right;
+}
+.accordinAnswered {
+	height: 15px;
+	width: 15px;
+	background-color: green;
+	border-radius: 50%;
+	float: right;
+}
+.accordinCenter {
+	font-size: 15px;
+	font-family: $appFont;
+	text-align: left;
+}
+.accordinHead {
+	text-align: center;
+	font-size: 15px;
+	font-family: $appFont;
+}
+.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	width: 80%;
+	margin: auto;
+}
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	&:focus {
+		border: 0.5px solid $backgroundColorThemeBlue;
+		outline: none;
+	}
+}
+[type=number] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	&:focus {
+		border: 0.5px solid $backgroundColorThemeBlue;
+		outline: none;
+	}
+}
+[type=date] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	&:focus {
+		border: 0.5px solid $backgroundColorThemeBlue;
+		outline: none;
+	}
+}
+select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	&:focus {
+		border: 0.5px solid $backgroundColorThemeBlue;
+		outline: none;
+	}
+}
+[type="radio"] {
+	&:checked {
+		position: absolute;
+		left: -9999px;
+		+ {
+			label {
+				position: relative;
+				padding-left: 28px;
+				cursor: pointer;
+				line-height: 20px;
+				display: inline-block;
+				color: #666;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #ddd;
+					border-radius: 100%;
+					background: #fff;
+				}
+				&:after {
+					content: '';
+					width: 12px;
+					height: 12px;
+					background: $backgroundColorThemeBlue;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					border-radius: 100%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&:not(:checked) {
+		position: absolute;
+		left: -9999px;
+		+ {
+			label {
+				position: relative;
+				padding-left: 28px;
+				cursor: pointer;
+				line-height: 20px;
+				display: inline-block;
+				color: #666;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #ddd;
+					border-radius: 100%;
+					background: #fff;
+				}
+				&:after {
+					content: '';
+					width: 12px;
+					height: 12px;
+					background: $backgroundColorThemeBlue;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					border-radius: 100%;
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+[type="checkbox"] {
+	&:checked {
+		position: absolute;
+		left: -9999px;
+		+ {
+			label {
+				position: relative;
+				padding-left: 28px;
+				cursor: pointer;
+				line-height: 20px;
+				display: inline-block;
+				color: #666;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #ddd;
+					border-radius: 100%;
+					background: #fff;
+				}
+				&:after {
+					content: '';
+					width: 12px;
+					height: 12px;
+					background: $backgroundColorThemeBlue;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					border-radius: 100%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&:not(:checked) {
+		position: absolute;
+		left: -9999px;
+		+ {
+			label {
+				position: relative;
+				padding-left: 28px;
+				cursor: pointer;
+				line-height: 20px;
+				display: inline-block;
+				color: #666;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #ddd;
+					border-radius: 100%;
+					background: #fff;
+				}
+				&:after {
+					content: '';
+					width: 12px;
+					height: 12px;
+					background: $backgroundColorThemeBlue;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					border-radius: 100%;
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
